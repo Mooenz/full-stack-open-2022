@@ -15,6 +15,8 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
       - [0.5: Aplicación de una sola página](#05-aplicación-de-una-sola-página)
       - [0.6: Nueva nota spa](#06-nueva-nota-spa)
     - [**Part 1**](#part-1)
+      - [1.1: información del curso, paso 1](#11-información-del-curso-paso-1)
+      - [1.2: información del curso, paso 2](#12-información-del-curso-paso-2)
     - [**Part 2**](#part-2)
     - [**Part 3**](#part-3)
     - [**Part 4**](#part-4)
@@ -146,6 +148,81 @@ server-->browser: {"message":"note created"}
 ![respuesta 0.6](./part-0/spa-new-note.png)
 
 ### **Part 1**
+
+#### 1.1: información del curso, paso 1
+
+La aplicación en la que comenzaremos a trabajar en este ejercicio se desarrollará más a fondo en algunos de los siguientes ejercicios. En este y otros conjuntos de ejercicios futuros de este curso, es suficiente enviar solo el estado final de la aplicación. Si lo desea, también puede crear un commit para cada ejercicio de la serie, pero esto es completamente opcional.
+
+Use create-react-app para inicializar una nueva aplicación. Modifique index.js para que coincida con lo siguiente
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = () => {
+  const course = 'Half Stack application development';
+  const part1 = 'Fundamentals of React';
+  const exercises1 = 10;
+  const part2 = 'Using props to pass data';
+  const exercises2 = 7;
+  const part3 = 'State of a component';
+  const exercises3 = 14;
+
+  return (
+    <div>
+      <h1>{course}</h1>
+      <p>
+        {part1} {exercises1}
+      </p>
+      <p>
+        {part2} {exercises2}
+      </p>
+      <p>
+        {part3} {exercises3}
+      </p>
+      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+y elimine archivos adicionales (App.js, App.css, App.test.js, logo.svg, setupTests.js, reportWebVitals.js).
+
+Desafortunadamente, toda la aplicación está en el mismo componente. Refactorice el código para que conste de tres componentes nuevos: Header, Content y Total. Todos los datos aún residen en el componente App, que pasa los datos necesarios a cada componente mediante props. Header se encarga de representar el nombre del curso, Content representa las partes y su número de ejercicios y Total representa el número total de ejercicios.
+
+El cuerpo del componente App será aproximadamente como sigue:
+
+```jsx
+const App = () => {
+  // const-definitions
+
+  return (
+    <div>
+      <Header course={course} />
+      <Content ... />
+      <Total ... />
+    </div>
+  )
+}
+```
+
+#### 1.2: información del curso, paso 2
+
+Refactorice el componente Content para que no represente ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes Part de los cuales cada uno representa el nombre y el número de ejercicios de una part
+
+```jsx
+const Content = ... {
+  return (
+    <div>
+      <Part .../>
+      <Part .../>
+      <Part .../>
+    </div>
+  )
+}
+```
 
 ### **Part 2**
 
