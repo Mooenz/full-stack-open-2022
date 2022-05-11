@@ -50,7 +50,7 @@ Aprende sobre los conceptos básicos de los formularios HTML leyendo el tutorial
 Crear un diagrama similar que describa la situación en la que el usuario crea una nueva nota en la página [https://studies.cs.helsinki.fi/exampleapp/notes](https://studies.cs.helsinki.fi/exampleapp/notes) escribiendo algo en el campo de texto y haciendo clic en el botón submit.
 
 - usuario rellena el input y se enviá la información mediante un botón llamado "save".
-- el navegador enviá una solicitud post con la información del formulario a la dirección "exampleapp/new_note".
+- el navegador envía una solicitud post con la información del formulario a la dirección "exampleapp/new_note".
 - el servidor guarda la información recibida.
 - el evento submit recarga el navegador realizando una nueva petición al servidor, cargado los archivos notes, main.css y main.js.
 
@@ -89,7 +89,7 @@ that renders notes to display
 end note
 ```
 
-![respuesta 0.4](./part-0/0.4/new-note.png)
+![respuesta 0.4](./part-0/new-note.png)
 
 #### 0.5: Aplicación de una sola página
 
@@ -122,7 +122,7 @@ that renders notes to display
 end note
 ```
 
-![respuesta 0.5](./part-0/0.5/spa.png)
+![respuesta 0.5](./part-0/spa.png)
 
 #### 0.6: Nueva nota spa
 
@@ -143,7 +143,7 @@ browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/spa
 server-->browser: {"message":"note created"}
 ```
 
-![respuesta 0.6](./part-0/0.6/spa-new-note.png)
+![respuesta 0.6](./part-0/spa-new-note.png)
 
 ### **Part 1**
 
