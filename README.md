@@ -7,16 +7,31 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
 - [**Full Stack Open 2022**](#full-stack-open-2022)
   - [**Contenido**](#contenido)
   - [**Temas**](#temas)
-    - [**Part 0**](#part-0)
+    - [**Part 0: Fundamentos de las aplicaciones web**](#part-0-fundamentos-de-las-aplicaciones-web)
       - [0.1: HTML](#01-html)
       - [0.2: CSS](#02-css)
       - [0.3: Formularios HTML](#03-formularios-html)
       - [0.4: Nueva nota](#04-nueva-nota)
       - [0.5: Aplicación de una sola página](#05-aplicación-de-una-sola-página)
       - [0.6: Nueva nota spa](#06-nueva-nota-spa)
-    - [**Part 1**](#part-1)
+    - [**Part 1A: Introducción a react**](#part-1a-introducción-a-react)
       - [1.1: información del curso, paso 1](#11-información-del-curso-paso-1)
       - [1.2: información del curso, paso 2](#12-información-del-curso-paso-2)
+    - [**Part 1B: JavaScript**](#part-1b-javascript)
+      - [1.3: información del curso, paso 3](#13-información-del-curso-paso-3)
+      - [1.4: información del curso paso 4](#14-información-del-curso-paso-4)
+      - [1.5: información del curso paso 5](#15-información-del-curso-paso-5)
+    - [**Part 1C: Estado del componente, controladores de eventos**](#part-1c-estado-del-componente-controladores-de-eventos)
+      - [1.6: unicafe, paso 1](#16-unicafe-paso-1)
+      - [1.7: unicafe, paso 2](#17-unicafe-paso-2)
+      - [1.8: unicafe, paso 3](#18-unicafe-paso-3)
+      - [1.9: unicafe, paso 4](#19-unicafe-paso-4)
+      - [1.10: unicafe, paso 5](#110-unicafe-paso-5)
+      - [1.11: unicafe, paso 6](#111-unicafe-paso-6)
+    - [**Part 1D: Un estado más complejo, depurando aplicaciones React**](#part-1d-un-estado-más-complejo-depurando-aplicaciones-react)
+      - [1.12: anécdotes, paso 1](#112-anécdotes-paso-1)
+      - [1.13: anécdotes, paso 2](#113-anécdotes-paso-2)
+      - [1.14: anécdotes, paso 3](#114-anécdotes-paso-3)
     - [**Part 2**](#part-2)
     - [**Part 3**](#part-3)
     - [**Part 4**](#part-4)
@@ -33,7 +48,7 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
 
 ## **Temas**
 
-### **Part 0**
+### **Part 0: Fundamentos de las aplicaciones web**
 
 #### 0.1: HTML
 
@@ -147,82 +162,71 @@ server-->browser: {"message":"note created"}
 
 ![respuesta 0.6](./part-0/spa-new-note.png)
 
-### **Part 1**
+### **Part 1A: Introducción a react**
 
 #### 1.1: información del curso, paso 1
 
-La aplicación en la que comenzaremos a trabajar en este ejercicio se desarrollará más a fondo en algunos de los siguientes ejercicios. En este y otros conjuntos de ejercicios futuros de este curso, es suficiente enviar solo el estado final de la aplicación. Si lo desea, también puede crear un commit para cada ejercicio de la serie, pero esto es completamente opcional.
-
-Use create-react-app para inicializar una nueva aplicación. Modifique index.js para que coincida con lo siguiente
-
-```jsx
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-const App = () => {
-  const course = 'Half Stack application development';
-  const part1 = 'Fundamentals of React';
-  const exercises1 = 10;
-  const part2 = 'Using props to pass data';
-  const exercises2 = 7;
-  const part3 = 'State of a component';
-  const exercises3 = 14;
-
-  return (
-    <div>
-      <h1>{course}</h1>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p>
-    </div>
-  );
-};
-
-ReactDOM.render(<App />, document.getElementById('root'));
-```
-
-y elimine archivos adicionales (App.js, App.css, App.test.js, logo.svg, setupTests.js, reportWebVitals.js).
-
-Desafortunadamente, toda la aplicación está en el mismo componente. Refactorice el código para que conste de tres componentes nuevos: Header, Content y Total. Todos los datos aún residen en el componente App, que pasa los datos necesarios a cada componente mediante props. Header se encarga de representar el nombre del curso, Content representa las partes y su número de ejercicios y Total representa el número total de ejercicios.
-
-El cuerpo del componente App será aproximadamente como sigue:
-
-```jsx
-const App = () => {
-  // const-definitions
-
-  return (
-    <div>
-      <Header course={course} />
-      <Content ... />
-      <Total ... />
-    </div>
-  )
-}
-```
+![1.1](./recursos/1.1.png)
 
 #### 1.2: información del curso, paso 2
 
-Refactorice el componente Content para que no represente ningún nombre de partes o su número de ejercicios por sí mismo. En su lugar, solo representa tres componentes Part de los cuales cada uno representa el nombre y el número de ejercicios de una part
+![1.2](./recursos/1.2.png)
 
-```jsx
-const Content = ... {
-  return (
-    <div>
-      <Part .../>
-      <Part .../>
-      <Part .../>
-    </div>
-  )
-}
-```
+### **Part 1B: JavaScript**
+
+#### 1.3: información del curso, paso 3
+
+![1.3](./recursos/1.3.png)
+
+#### 1.4: información del curso paso 4
+
+![1.4](./recursos/1.4.png)
+
+#### 1.5: información del curso paso 5
+
+![1.5](./recursos/1.5.png)
+
+Solución para [**courseinfo**](https://github.com/Mooenz/full-stack-open-2022/tree/main/part-1/courseinfo)
+
+### **Part 1C: Estado del componente, controladores de eventos**
+
+#### 1.6: unicafe, paso 1
+
+![1.6](./recursos/1.6.png)
+
+#### 1.7: unicafe, paso 2
+
+![1.7](./recursos/1.7.png)
+
+#### 1.8: unicafe, paso 3
+
+![1.8](./recursos/1.8.png)
+
+#### 1.9: unicafe, paso 4
+
+![1.9](./recursos/1.9.png)
+
+#### 1.10: unicafe, paso 5
+
+![1.10](./recursos/1.10.png)
+
+#### 1.11: unicafe, paso 6
+
+![1.11](./recursos/1.11.png)
+
+### **Part 1D: Un estado más complejo, depurando aplicaciones React**
+
+#### 1.12: anécdotes, paso 1
+
+![1.12](./recursos/1.12.png)
+
+#### 1.13: anécdotes, paso 2
+
+![1.13](./recursos/1.13.png)
+
+#### 1.14: anécdotes, paso 3
+
+![1.14](./recursos/1.14.png)
 
 ### **Part 2**
 
