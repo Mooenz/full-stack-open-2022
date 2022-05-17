@@ -8,9 +8,6 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
   - [**Contenido**](#contenido)
   - [**Temas**](#temas)
     - [**Part 0: Fundamentos de las aplicaciones web**](#part-0-fundamentos-de-las-aplicaciones-web)
-      - [0.1: HTML](#01-html)
-      - [0.2: CSS](#02-css)
-      - [0.3: Formularios HTML](#03-formularios-html)
       - [0.4: Nueva nota](#04-nueva-nota)
       - [0.5: Aplicación de una sola página](#05-aplicación-de-una-sola-página)
       - [0.6: Nueva nota spa](#06-nueva-nota-spa)
@@ -32,7 +29,13 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
       - [1.12: anécdotes, paso 1](#112-anécdotes-paso-1)
       - [1.13: anécdotes, paso 2](#113-anécdotes-paso-2)
       - [1.14: anécdotes, paso 3](#114-anécdotes-paso-3)
-    - [**Part 2**](#part-2)
+    - [**Part 2A: Renderizando una colección, módulos**](#part-2a-renderizando-una-colección-módulos)
+      - [2.1 al 2.5: Información del curso paso 6, 7, 8 y 9](#21-al-25-información-del-curso-paso-6-7-8-y-9)
+    - [**Part 2B: Formularios**](#part-2b-formularios)
+      - [2.6 al 2.10: La guía telefónica paso 1, 2, 3 y 4](#26-al-210-la-guía-telefónica-paso-1-2-3-y-4)
+    - [**Part 2C: Obteniendo datos del servidor**](#part-2c-obteniendo-datos-del-servidor)
+    - [**Part 2D: Alterando datos en el servidor**](#part-2d-alterando-datos-en-el-servidor)
+    - [**Part 2E: Agregar estilos a la aplicación React**](#part-2e-agregar-estilos-a-la-aplicación-react)
     - [**Part 3**](#part-3)
     - [**Part 4**](#part-4)
     - [**Part 5**](#part-5)
@@ -49,18 +52,6 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
 ## **Temas**
 
 ### **Part 0: Fundamentos de las aplicaciones web**
-
-#### 0.1: HTML
-
-Revise los conceptos básicos de HTML leyendo este tutorial de Mozilla: [tutorial HTML.](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/HTML_basics) _Este ejercicio no se envía a GitHub, basta con leer el tutorial_
-
-#### 0.2: CSS
-
-Revise los conceptos básicos de CSS leyendo este tutorial de Mozilla: [tutorial CSS.](https://developer.mozilla.org/es/docs/Learn/Getting_started_with_the_web/CSS_basics) _Este ejercicio no se envía a GitHub, basta con leer el tutorial_
-
-#### 0.3: Formularios HTML
-
-Aprende sobre los conceptos básicos de los formularios HTML leyendo el tutorial de Mozilla [Tu primer formulario.](https://developer.mozilla.org/es/docs/Learn/Forms/Your_first_form) _Este ejercicio no se envía a GitHub, basta con leer el tutorial_
 
 #### 0.4: Nueva nota
 
@@ -186,8 +177,6 @@ server-->browser: {"message":"note created"}
 
 ![1.5](./recursos/1.5.png)
 
-Solución para [**courseinfo**](https://github.com/Mooenz/full-stack-open-2022/tree/main/part-1/courseinfo)
-
 ### **Part 1C: Estado del componente, controladores de eventos**
 
 #### 1.6: unicafe, paso 1
@@ -228,7 +217,33 @@ Solución para [**courseinfo**](https://github.com/Mooenz/full-stack-open-2022/t
 
 ![1.14](./recursos/1.14.png)
 
-### **Part 2**
+### **Part 2A: Renderizando una colección, módulos**
+
+#### 2.1 al 2.5: Información del curso paso 6, 7, 8 y 9
+
+![2.1 al 2.5](./recursos/2a-app.png)
+
+![2.1 al 2.5](./recursos/2a-course.png)
+
+![2.1 al 2.5](./recursos/2a-index.png)
+
+### **Part 2B: Formularios**
+
+#### 2.6 al 2.10: La guía telefónica paso 1, 2, 3 y 4
+
+![2.6 al 2.10](./recursos/2b-app.png)
+
+![2.6 al 2.10](./recursos/2b-filter.png)
+
+![2.6 al 2.10](./recursos/2b-personForm.png)
+
+![2.6 al 2.10](./recursos/2b-persons.png)
+
+### **Part 2C: Obteniendo datos del servidor**
+
+### **Part 2D: Alterando datos en el servidor**
+
+### **Part 2E: Agregar estilos a la aplicación React**
 
 ### **Part 3**
 
