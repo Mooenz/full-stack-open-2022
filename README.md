@@ -224,9 +224,7 @@ server-->browser: {"message":"note created"}
 #### 2.1 al 2.5: Información del curso paso 6, 7, 8 y 9
 
 ![2.1 al 2.5](./recursos/2a-app.png)
-
 ![2.1 al 2.5](./recursos/2a-course.png)
-
 ![2.1 al 2.5](./recursos/2a-index.png)
 
 ### **Part 2B: Formularios**
@@ -234,11 +232,8 @@ server-->browser: {"message":"note created"}
 #### 2.6 al 2.10: La guía telefónica paso 1, 2, 3 y 4
 
 ![2.6 al 2.10](./recursos/2b-app.png)
-
 ![2.6 al 2.10](./recursos/2b-filter.png)
-
 ![2.6 al 2.10](./recursos/2b-personForm.png)
-
 ![2.6 al 2.10](./recursos/2b-persons.png)
 
 ### **Part 2C: Obteniendo datos del servidor**
@@ -260,7 +255,17 @@ server-->browser: {"message":"note created"}
 
 ### **Part 2D: Alterando datos en el servidor**
 
+![2.15 al 2.18](./recursos/2d-app.png)
+![2.15 al 2.18](./recursos/2d-personForm.png)
+![2.15 al 2.18](./recursos/2d-persons.png)
+![2.15 al 2.18](./recursos/2d-services-persons.png)
+
 ### **Part 2E: Agregar estilos a la aplicación React**
+
+![2.19 al 2.20](./recursos/2e-app.png)
+![2.19 al 2.20](./recursos/2e-index-css.png)
+![2.19 al 2.20](./recursos/2e-index-js.png)
+![2.19 al 2.20](./recursos/2e-notification.png)
 
 ### **Part 3**
 
