@@ -34,6 +34,8 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
     - [**Part 2B: Formularios**](#part-2b-formularios)
       - [2.6 al 2.10: La guía telefónica paso 1, 2, 3 y 4](#26-al-210-la-guía-telefónica-paso-1-2-3-y-4)
     - [**Part 2C: Obteniendo datos del servidor**](#part-2c-obteniendo-datos-del-servidor)
+      - [2.11: La guía telefónica paso 5](#211-la-guía-telefónica-paso-5)
+      - [2.12: Datos para países paso 1, 2, 3](#212-datos-para-países-paso-1-2-3)
     - [**Part 2D: Alterando datos en el servidor**](#part-2d-alterando-datos-en-el-servidor)
     - [**Part 2E: Agregar estilos a la aplicación React**](#part-2e-agregar-estilos-a-la-aplicación-react)
     - [**Part 3**](#part-3)
@@ -240,6 +242,21 @@ server-->browser: {"message":"note created"}
 ![2.6 al 2.10](./recursos/2b-persons.png)
 
 ### **Part 2C: Obteniendo datos del servidor**
+
+#### 2.11: La guía telefónica paso 5
+
+![2.11](./recursos/2c-11-app.png)
+![2.11](./recursos/2c-11-filter.png)
+![2.11](./recursos/2c-11-personForm.png)
+![2.11](./recursos/2c-11-persons.png)
+
+#### 2.12: Datos para países paso 1, 2, 3
+
+![2.12 al 2.14](./recursos/2c-app.png)
+![2.12 al 2.14](./recursos/2c-countrie.png)
+![2.12 al 2.14](./recursos/2c-countries.png)
+![2.12 al 2.14](./recursos/2c-search.png)
+![2.12 al 2.14](./recursos/2c-weather.png)
 
 ### **Part 2D: Alterando datos en el servidor**
 
