@@ -1,27 +1,31 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // Components
 import Persons from './components/Persons';
 import PersonForm from './components/PersonForm';
 import Filter from './components/Filter';
+import Notification from './components/Notification';
+
+// Services
+import services from './services/persons';
 
 const App = () => {
-  // Persons default
-  const [persons, setPersons] = useState([
-    { name: 'Arto Hellas', phone: '040-123456' },
-    { name: 'Ada Lovelace', phone: '39-44-5323523' },
-    { name: 'Dan Abramov', phone: '12-43-234345' },
-    { name: 'Mary Poppendieck', phone: '39-23-6423122' },
-  ]);
-
-  // State new person
-  const [newPerson, setNewPerson] = useState({ name: '', phone: '' });
-
-  // State filter
+  // States
+  const [persons, setPersons] = useState([]);
+  const [newPerson, setNewPerson] = useState({ name: '', number: '' });
   const [filter, setfilter] = useState('');
+  const [message, setMessage] = useState({
+    body: '',
+    type: '',
+  });
 
   // newPerson.name exist in persons ?
   const isNewName = persons.find(
+    (person) =>
+      person.name.toLocaleLowerCase() === newPerson.name.toLocaleLowerCase()
+  );
+
+  const serchPersonDelect = persons.filter(
     (person) =>
       person.name.toLocaleLowerCase() === newPerson.name.toLocaleLowerCase()
   );
@@ -30,16 +34,55 @@ const App = () => {
   const addNewName = (event) => {
     event.preventDefault();
 
-    if (!isNewName) {
-      const personObject = {
-        name: newPerson.name,
-        phone: newPerson.phone,
-      };
+    const personObject = {
+      name: newPerson.name,
+      number: newPerson.number,
+    };
 
-      setPersons(persons.concat(personObject));
-      setNewPerson({ name: '', phone: '' });
+    if (!isNewName) {
+      services.createPerson(personObject).then(() => {
+        setPersons(persons.concat(personObject));
+        setNewPerson({ name: '', number: '' });
+        getPersons();
+
+        const mesageObject = {
+          body: `Added ${personObject.name}`,
+          type: 'success',
+        };
+
+        setMessage(mesageObject);
+
+        // setTimeout(() => {
+        //   setSuccess(null)
+        // }, 5000);
+      });
     } else {
-      alert(`${newPerson.name} is already added to phonebook`);
+      const confirm = window.confirm(
+        `${newPerson.name} is already added to phonebook, replace the old number whit a new one?`
+      );
+
+      const id = serchPersonDelect[0].id;
+
+      confirm &&
+        services
+          .updateNumber(id, personObject)
+          .then((response) => {
+            setPersons(
+              persons.map((person) => (person.id !== id ? person : response))
+            );
+            setNewPerson({ name: '', number: '' });
+            getPersons();
+          })
+          .catch((error) => {
+            console.error(`Update number failed: ${error}`);
+
+            const mesageObject = {
+              body: `information of ${personObject.name} has already been removed from server`,
+              type: 'error',
+            };
+
+            setMessage(mesageObject);
+          });
     }
   };
 
@@ -49,10 +92,19 @@ const App = () => {
 
   // Controller add person.phone
   const handleNewPhone = (event) =>
-    setNewPerson({ ...newPerson, phone: event.target.value });
+    setNewPerson({ ...newPerson, number: event.target.value });
 
   // Controller filter
   const handleFilter = (event) => setfilter(event.target.value);
+
+  // Controller deleted
+  const deletedPerson = (name, id) => {
+    const confirmDeleted = window.confirm(`Detele ${name} ?`);
+    confirmDeleted &&
+      services.deletePerson(id).then(() => {
+        setPersons(persons.filter((person) => person.id !== id));
+      });
+  };
 
   // What do render
   const personToShow =
@@ -64,22 +116,34 @@ const App = () => {
               .toLocaleLowerCase()
               .indexOf(filter.toLocaleLowerCase()) > -1
         );
+  // Get persons
+  const getPersons = () => {
+    services.getPersons().then((response) => {
+      return setPersons(response);
+    });
+  };
+
+  // UseEffect
+  useEffect(() => {
+    getPersons();
+  }, []);
 
   return (
     <div>
       <h2>Phonebook</h2>
+      {message.body !== '' && <Notification message={message} />}
       <Filter handleFilter={handleFilter} />
       <div>
         <h2>add a new</h2>
       </div>
-      <h2>Numbers</h2>
       <PersonForm
         addNewName={addNewName}
         handleNewName={handleNewName}
         handleNewPhone={handleNewPhone}
         newPerson={newPerson}
       />
-      <Persons personToShow={personToShow} />
+      <h2>Numbers</h2>
+      <Persons personToShow={personToShow} handleButton={deletedPerson} />
     </div>
   );
 };
