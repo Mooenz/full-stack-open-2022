@@ -35,9 +35,11 @@ Este repositorio está hecho para agregar las soluciones a los diferentes retos 
       - [2.6 al 2.10: La guía telefónica paso 1, 2, 3 y 4](#26-al-210-la-guía-telefónica-paso-1-2-3-y-4)
     - [**Part 2C: Obteniendo datos del servidor**](#part-2c-obteniendo-datos-del-servidor)
       - [2.11: La guía telefónica paso 5](#211-la-guía-telefónica-paso-5)
-      - [2.12: Datos para países paso 1, 2, 3](#212-datos-para-países-paso-1-2-3)
+      - [2.12 al 2.24: Datos para países paso 1, 2 y 3](#212-al-224-datos-para-países-paso-1-2-y-3)
     - [**Part 2D: Alterando datos en el servidor**](#part-2d-alterando-datos-en-el-servidor)
+      - [2.15 al 2.18: La guía telefónica 6, 7, 8, 9 y 10](#215-al-218-la-guía-telefónica-6-7-8-9-y-10)
     - [**Part 2E: Agregar estilos a la aplicación React**](#part-2e-agregar-estilos-a-la-aplicación-react)
+      - [2.15 al 2.18: La guía telefónica 11 y 12](#215-al-218-la-guía-telefónica-11-y-12)
     - [**Part 3**](#part-3)
     - [**Part 4**](#part-4)
     - [**Part 5**](#part-5)
@@ -245,7 +247,7 @@ server-->browser: {"message":"note created"}
 ![2.11](./recursos/2c-11-personForm.png)
 ![2.11](./recursos/2c-11-persons.png)
 
-#### 2.12: Datos para países paso 1, 2, 3
+#### 2.12 al 2.24: Datos para países paso 1, 2 y 3
 
 ![2.12 al 2.14](./recursos/2c-app.png)
 ![2.12 al 2.14](./recursos/2c-countrie.png)
@@ -255,12 +257,16 @@ server-->browser: {"message":"note created"}
 
 ### **Part 2D: Alterando datos en el servidor**
 
+#### 2.15 al 2.18: La guía telefónica 6, 7, 8, 9 y 10
+
 ![2.15 al 2.18](./recursos/2d-app.png)
 ![2.15 al 2.18](./recursos/2d-personForm.png)
 ![2.15 al 2.18](./recursos/2d-persons.png)
 ![2.15 al 2.18](./recursos/2d-services-persons.png)
 
 ### **Part 2E: Agregar estilos a la aplicación React**
+
+#### 2.15 al 2.18: La guía telefónica 11 y 12
 
 ![2.19 al 2.20](./recursos/2e-app.png)
 ![2.19 al 2.20](./recursos/2e-index-css.png)
