@@ -273,7 +273,7 @@ server-->browser: {"message":"note created"}
 ![2.19 al 2.20](./recursos/2e-index-js.png)
 ![2.19 al 2.20](./recursos/2e-notification.png)
 
-### **Part 3**
+### **Part 3** 
 
 ### **Part 4**
 
